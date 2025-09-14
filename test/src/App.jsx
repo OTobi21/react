@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useDebounce } from "react-use";
 import Search from "./components/search";
 import Loading from "./components/loading";
 import MovieCard from "./components/movieCard";
@@ -19,6 +20,10 @@ const App = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [movielist, setMovielist] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  // debounce is giving me some issues its stoping the site from rendering
+  // const [debouncedSearchTerm, setDebouncedSearchTerm] = useState(searchTerm);
+
+  // useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm]);
 
   const fetchMovies = async (query = '') => {
     setIsLoading(true);
