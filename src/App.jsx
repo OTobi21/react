@@ -1,7 +1,7 @@
 import  { useEffect, useState } from "react";
 import Search from "./components/search";
 import Loading from "./components/loading";
-import MovieCard from "./components/movieCard";
+import MovieCard from "./components/MovieCard";
 import { useDebounce } from "./hooks/debounced";
 import { getTrendingMovies ,updateSearchCount } from "./appwrite";
 
